@@ -55,7 +55,7 @@
     [[[self signalForLoadingImage:tweet.profileImageUrl]
       deliverOn:[RACScheduler mainThreadScheduler]]
      subscribeNext:^(id  _Nullable x) {
-         cell.twitterAvatarView.image = x;
+         cell.twitterAvatarView.image = x; // 这里还有问题，图片加载不出来
      }];
     return cell;
 }
